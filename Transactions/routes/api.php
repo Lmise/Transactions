@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('order', 'OrderController@index');
+Route::get('order/{order}', 'OrderController@show');
+Route::post('order', 'OrderController@store');
+Route::put('order', 'OrderController@update');
+Route::post('order', 'OrderController@store');
